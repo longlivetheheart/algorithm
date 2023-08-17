@@ -7,13 +7,15 @@ package recursion;
  */
 public class ReverseString {
     public static void main(String[] args) {
-        System.out.println(reverseString("kang"));
+        System.out.println(reverseString("dcba"));
     }
 
     public static String reverseString(String s) {
-        if (s.length() <= 1) {
+        if (s.length() == 1) {
             return s;
         }
-        return reverseString(s.substring(1)) + s.charAt(0);
+        String pre = reverseString(s.substring(1));
+        String now = pre + s.charAt(0);
+        return now;
     }
 }
